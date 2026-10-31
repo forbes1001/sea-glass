@@ -14,7 +14,14 @@ export default defineConfig(({ command }) => ({
       },
       server: { entry: "server" },
     }),
-    ...(command === "build" ? [nitro({ preset: "cloudflare-module" })] : []),
+    ...(command === "build"
+      ? [
+          nitro({
+            preset: "firebase-app-hosting",
+            noExternals: true,
+          }),
+        ]
+      : []),
     react(),
   ],
   resolve: { tsconfigPaths: true },
