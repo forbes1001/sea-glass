@@ -1,0 +1,111 @@
+mutation CreateDemoData @transaction {
+  artist_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      name: "Alice Artist",
+      bio: "Painter of dreams",
+      email: "alice@example.com"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440002",
+      name: "Bob Sculptor",
+      bio: "Shapes the world",
+      email: "bob@example.com"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440003",
+      name: "Charlie Photographer",
+      bio: "Captures moments",
+      email: "charlie@example.com"
+    }
+  ])
+  customer_insertMany(data: [
+    {
+      id: "660e8400-e29b-41d4-a716-446655440001",
+      name: "Customer One",
+      email: "c1@example.com"
+    },
+    {
+      id: "660e8400-e29b-41d4-a716-446655440002",
+      name: "Customer Two",
+      email: "c2@example.com"
+    },
+    {
+      id: "660e8400-e29b-41d4-a716-446655440003",
+      name: "Customer Three",
+      email: "c3@example.com"
+    }
+  ])
+  product_insertMany(data: [
+    {
+      id: "770e8400-e29b-41d4-a716-446655440001",
+      title: "Abstract Painting",
+      description: "A colorful abstract piece",
+      price: 150.0,
+      stockQuantity: 10,
+      artistId: "550e8400-e29b-41d4-a716-446655440001"
+    },
+    {
+      id: "770e8400-e29b-41d4-a716-446655440002",
+      title: "Clay Vase",
+      description: "Handcrafted clay vase",
+      price: 80.0,
+      stockQuantity: 5,
+      artistId: "550e8400-e29b-41d4-a716-446655440002"
+    },
+    {
+      id: "770e8400-e29b-41d4-a716-446655440003",
+      title: "Sunset Print",
+      description: "A high-quality sunset photograph",
+      price: 45.0,
+      stockQuantity: 20,
+      artistId: "550e8400-e29b-41d4-a716-446655440003"
+    }
+  ])
+  order_insertMany(data: [
+    {
+      id: "880e8400-e29b-41d4-a716-446655440001",
+      status: "COMPLETED",
+      totalAmount: 150.0,
+      createdAt_expr: "request.time",
+      customerId: "660e8400-e29b-41d4-a716-446655440001"
+    },
+    {
+      id: "880e8400-e29b-41d4-a716-446655440002",
+      status: "PENDING",
+      totalAmount: 80.0,
+      createdAt_expr: "request.time",
+      customerId: "660e8400-e29b-41d4-a716-446655440002"
+    },
+    {
+      id: "880e8400-e29b-41d4-a716-446655440003",
+      status: "SHIPPED",
+      totalAmount: 45.0,
+      createdAt_expr: "request.time",
+      customerId: "660e8400-e29b-41d4-a716-446655440003"
+    }
+  ])
+  orderItem_insertMany(data: [
+    {
+      id: "990e8400-e29b-41d4-a716-446655440001",
+      quantity: 1,
+      priceAtPurchase: 150.0,
+      orderId: "880e8400-e29b-41d4-a716-446655440001",
+      productId: "770e8400-e29b-41d4-a716-446655440001"
+    },
+    {
+      id: "990e8400-e29b-41d4-a716-446655440002",
+      quantity: 1,
+      priceAtPurchase: 80.0,
+      orderId: "880e8400-e29b-41d4-a716-446655440002",
+      productId: "770e8400-e29b-41d4-a716-446655440002"
+    },
+    {
+      id: "990e8400-e29b-41d4-a716-446655440003",
+      quantity: 1,
+      priceAtPurchase: 45.0,
+      orderId: "880e8400-e29b-41d4-a716-446655440003",
+      productId: "770e8400-e29b-41d4-a716-446655440003"
+    }
+  ])
+}

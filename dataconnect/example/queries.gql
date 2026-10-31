@@ -1,0 +1,137 @@
+mutation CreateArtistData($data: Artist_Data!) @auth(level: USER) {
+  artist_insert(data: $data)
+}
+
+mutation UpdateArtistData($key: Artist_Key!, $data: Artist_Data!) @auth(level: USER) {
+  artist_update(key: $key, data: $data)
+}
+
+mutation DeleteArtistData($key: Artist_Key!) @auth(level: USER) {
+  artist_delete(key: $key)
+}
+
+query GetArtist($key: Artist_Key!) @auth(level: USER) {
+  artist(key: $key) {
+    id
+    name
+    bio
+    email
+  }
+}
+
+query ListArtists @auth(level: PUBLIC, insecureReason: "Artists are public profiles") {
+  artists {
+    id
+    name
+  }
+}
+
+mutation CreateCustomerData($data: Customer_Data!) @auth(level: USER) {
+  customer_insert(data: $data)
+}
+
+mutation UpdateCustomerData($key: Customer_Key!, $data: Customer_Data!) @auth(level: USER) {
+  customer_update(key: $key, data: $data)
+}
+
+mutation DeleteCustomerData($key: Customer_Key!) @auth(level: USER) {
+  customer_delete(key: $key)
+}
+
+query GetCustomer($key: Customer_Key!) @auth(level: USER) {
+  customer(key: $key) {
+    id
+    name
+    email
+  }
+}
+
+query ListCustomers @auth(level: USER) {
+  customers {
+    id
+    name
+  }
+}
+
+mutation CreateOrderData($data: Order_Data!) @auth(level: USER) {
+  order_insert(data: $data)
+}
+
+mutation UpdateOrderData($key: Order_Key!, $data: Order_Data!) @auth(level: USER) {
+  order_update(key: $key, data: $data)
+}
+
+mutation DeleteOrderData($key: Order_Key!) @auth(level: USER) {
+  order_delete(key: $key)
+}
+
+query GetOrder($key: Order_Key!) @auth(level: USER) {
+  order(key: $key) {
+    id
+    status
+    totalAmount
+  }
+}
+
+query ListOrders @auth(level: USER) {
+  orders {
+    id
+    totalAmount
+  }
+}
+
+mutation CreateOrderItemData($data: OrderItem_Data!) @auth(level: USER) {
+  orderItem_insert(data: $data)
+}
+
+mutation UpdateOrderItemData($key: OrderItem_Key!, $data: OrderItem_Data!) @auth(level: USER) {
+  orderItem_update(key: $key, data: $data)
+}
+
+mutation DeleteOrderItemData($key: OrderItem_Key!) @auth(level: USER) {
+  orderItem_delete(key: $key)
+}
+
+query GetOrderItem($key: OrderItem_Key!) @auth(level: USER) {
+  orderItem(key: $key) {
+    id
+    quantity
+    priceAtPurchase
+  }
+}
+
+query ListOrderItems @auth(level: USER) {
+  orderItems {
+    id
+    quantity
+  }
+}
+
+mutation CreateProductData($data: Product_Data!) @auth(level: USER) {
+  product_insert(data: $data)
+}
+
+mutation UpdateProductData($key: Product_Key!, $data: Product_Data!) @auth(level: USER) {
+  product_update(key: $key, data: $data)
+}
+
+mutation DeleteProductData($key: Product_Key!) @auth(level: USER) {
+  product_delete(key: $key)
+}
+
+query GetProduct($key: Product_Key!) @auth(level: PUBLIC, insecureReason: "Product listings are public") {
+  product(key: $key) {
+    id
+    title
+    description
+    price
+  }
+}
+
+query ListProducts @auth(level: PUBLIC, insecureReason: "Product listings are public") {
+  products {
+    id
+    title
+    price
+  }
+}

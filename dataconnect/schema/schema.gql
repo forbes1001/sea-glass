@@ -1,0 +1,39 @@
+type Artist @table {
+  name: String!
+  bio: String!
+  email: String!
+  profileImageUrl: String
+  shopBannerUrl: String
+}
+
+type Product @table {
+  title: String!
+  description: String!
+  price: Float!
+  stockQuantity: Int!
+  imageUrls: [String]
+  category: String
+  artist: Artist!
+}
+
+type Customer @table {
+  name: String!
+  email: String!
+  shippingAddress: String
+  phoneNumber: String
+}
+
+type Order @table {
+  status: String!
+  totalAmount: Float!
+  createdAt: Timestamp!
+  shippingDetails: String
+  customer: Customer!
+}
+
+type OrderItem @table {
+  quantity: Int!
+  priceAtPurchase: Float!
+  order: Order!
+  product: Product!
+}
