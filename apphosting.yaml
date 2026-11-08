@@ -7,22 +7,22 @@ runConfig:
 
 env:
   - variable: SUPABASE_URL
-    value: https://koknucsaydhrpltkkowu.supabase.com
+    value: https://xivkfzcqdrctelvahplw.supabase.co
     availability:
       - BUILD
       - RUNTIME
   - variable: SUPABASE_PUBLISHABLE_KEY
-    value: sb_publishable_Jmi_0z_phRjMqP8VnCEM2A_2JKkmoWh
+    value: sb_publishable_d9yvrjW1BjRFpKjQFcjEMQ_2dSkz2Vf
     availability:
       - BUILD
       - RUNTIME
   - variable: VITE_SUPABASE_URL
-    value: https://koknucsaydhrpltkkowu.supabase.com
+    value: https://xivkfzcqdrctelvahplw.supabase.co
     availability:
       - BUILD
       - RUNTIME
   - variable: VITE_SUPABASE_PUBLISHABLE_KEY
-    value: sb_publishable_Jmi_0z_phRjMqP8VnCEM2A_2JKkmoWh
+    value: sb_publishable_d9yvrjW1BjRFpKjQFcjEMQ_2dSkz2Vf
     availability:
       - BUILD
       - RUNTIME

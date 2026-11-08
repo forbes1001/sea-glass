@@ -5,9 +5,9 @@ import maker from "@/assets/maker.jpg";
 export const Route = createFileRoute("/current-projects")({
   head: () => ({
     meta: [
-      { title: "Current Projects — Sea Glass & Shards" },
+      { title: "Current Projects — Studio by the Shore" },
       { name: "description", content: "What is on the workbench right now: sea glass and broken ceramic pieces in progress, commissions under way, and what is coming next." },
-      { property: "og:title", content: "Current Projects — Sea Glass & Shards" },
+      { property: "og:title", content: "Current Projects — Studio by the Shore" },
       { property: "og:description", content: "A look at the workbench: pieces in progress, commissions under way, and what is coming next." },
     ],
   }),

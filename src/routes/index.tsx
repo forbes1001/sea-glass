@@ -10,9 +10,9 @@ import maker from "@/assets/maker.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sea Glass & Shards — Handmade beach-found crafts" },
-      { name: "description", content: "One-of-a-kind jewellery, mosaics and homeware handmade from sea glass and broken ceramics collected on the beach." },
-      { property: "og:title", content: "Sea Glass & Shards — Handmade beach-found crafts" },
+      { title: "Studio by the Shore — Handmade beach-found crafts" },
+      { name: "description", content: "One-of-a-kind romantic gifts, mosaics and homeware handmade from sea glass and broken ceramics collected on the beach." },
+      { property: "og:title", content: "Studio by the Shore — Handmade beach-found crafts" },
       { property: "og:description", content: "One-of-a-kind crafts made from sea glass and broken ceramics found on the shore." },
     ],
   }),
@@ -39,7 +39,7 @@ function Index() {
             Beautiful treasures from <em className="text-primary">broken things</em>
           </h1>
           <p className="mt-5 max-w-md text-lg text-muted-foreground">
-            Sea glass and old pottery shards, washed smooth by the waves, reborn as jewellery, mosaics and keepsakes.
+            Sea glass and old pottery shards, washed smooth by the waves, reborn as romantic gifts, mosaics and keepsakes.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg" className="rounded-full px-8"><Link to="/shop">Shop the collection</Link></Button>
@@ -48,7 +48,7 @@ function Index() {
         </div>
         <div className="relative">
           <div className="absolute -inset-4 -z-10 shard bg-blush" />
-          <img src={hero} alt="Sea glass and ceramic shard jewellery on sand and driftwood" width={1600} height={1008} className="aspect-[4/3] w-full rounded-[2.5rem] object-cover shadow-soft" />
+          <img src={hero} alt="Sea glass and ceramic shard romantic gifts on sand and driftwood" width={1600} height={1008} className="aspect-[4/3] w-full rounded-[2.5rem] object-cover shadow-soft" />
         </div>
       </section>
 

@@ -77,9 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sea Glass & Shards" },
+      { title: "Studio by the Shore" },
       { name: "description", content: "Handmade crafts from sea glass and broken ceramics." },
-      { property: "og:title", content: "Sea Glass & Shards" },
+      { property: "og:title", content: "Studio by the Shore" },
       { property: "og:description", content: "Handmade crafts from sea glass and broken ceramics." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

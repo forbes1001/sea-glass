@@ -11,9 +11,9 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & commissions — Sea Glass & Shards" },
+      { title: "Contact & commissions — Studio by the Shore" },
       { name: "description", content: "Get in touch about an order, a custom commission, or sea glass you'd like turned into something special." },
-      { property: "og:title", content: "Contact — Sea Glass & Shards" },
+      { property: "og:title", content: "Contact — Studio by the Shore" },
       { property: "og:description", content: "Questions, orders and custom commissions." },
     ],
   }),

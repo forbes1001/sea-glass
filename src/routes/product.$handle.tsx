@@ -14,13 +14,13 @@ export const Route = createFileRoute("/product/$handle")({
     return product;
   },
   head: ({ loaderData }) => {
-    if (!loaderData) return { meta: [{ title: "Unavailable — Sea Glass & Shards" }, { name: "robots", content: "noindex" }] };
+    if (!loaderData) return { meta: [{ title: "Unavailable — Studio by the Shore" }, { name: "robots", content: "noindex" }] };
     const p = loaderData.node;
     const img = p.images.edges[0]?.node.url;
     const desc = p.description.slice(0, 155) || "Handmade from sea glass and ceramic shards.";
     return {
       meta: [
-        { title: `${p.title} — Sea Glass & Shards` },
+        { title: `${p.title} — Studio by the Shore` },
         { name: "description", content: desc },
         { property: "og:title", content: p.title },
         { property: "og:description", content: desc },

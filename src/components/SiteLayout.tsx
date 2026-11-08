@@ -19,7 +19,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b bg-background/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link to="/" className="font-display text-xl">
-          Sea Glass <span className="italic text-primary">&amp;</span> Shards
+          Studio <span className="italic text-primary">by the</span> Shore
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {nav.map((n) => (
@@ -64,7 +64,7 @@ export function SiteFooter() {
         <div className="flex flex-col gap-2 text-sm text-secondary-foreground md:items-end">
           <Link to="/shop">Shop all</Link>
           <Link to="/contact">Contact &amp; commissions</Link>
-          <p className="mt-6">© {new Date().getFullYear()} Sea Glass &amp; Shards · Handmade by the sea</p>
+          <p className="mt-6">© {new Date().getFullYear()} Studio by the Shore · Handmade by the sea</p>
         </div>
       </div>
     </footer>

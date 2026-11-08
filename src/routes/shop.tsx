@@ -16,9 +16,9 @@ export const Route = createFileRoute("/shop")({
   validateSearch: searchSchema,
   head: () => ({
     meta: [
-      { title: "Shop — Sea Glass & Shards" },
+      { title: "Shop — Studio by the Shore" },
       { name: "description", content: "Browse handmade sea glass jewellery, ceramic shard mosaics and coastal homeware." },
-      { property: "og:title", content: "Shop — Sea Glass & Shards" },
+      { property: "og:title", content: "Shop — Studio by the Shore" },
       { property: "og:description", content: "Browse handmade sea glass and ceramic shard crafts." },
     ],
   }),

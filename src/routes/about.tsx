@@ -6,9 +6,9 @@ import hero from "@/assets/hero.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Sea Glass & Shards" },
+      { title: "About — Studio by the Shore" },
       { name: "description", content: "How one-of-a-kind sea glass and broken ceramic crafts are gathered on the beach and made by hand at a small coastal workbench." },
-      { property: "og:title", content: "About Sea Glass & Shards" },
+      { property: "og:title", content: "About Studio by the Shore" },
       { property: "og:description", content: "The maker, the shoreline, and how every piece is found and finished by hand." },
     ],
   }),
@@ -48,7 +48,7 @@ function About() {
             A beachcomber&apos;s <em className="text-primary">workbench</em>
           </h1>
           <p className="mt-5 max-w-md text-lg text-muted-foreground">
-            Sea Glass &amp; Shards is a one-person workshop. Everything here was broken, washed and found —
+            Studio by the Shore is a one-person workshop. Everything here was broken, washed and found —
             then given a second life as something you can actually wear or keep on a shelf.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
